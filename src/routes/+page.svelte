@@ -13,9 +13,9 @@
         <span class="sr-only">Acme Inc</span>
       </a>
       <nav class="ml-auto flex items-center gap-4 sm:gap-6">
-        <a href="#" class="text-sm font-medium hover:underline underline-offset-4">Features</a>
-        <a href="#" class="text-sm font-medium hover:underline underline-offset-4">Pricing</a>
-        <Button variant="outline">Login</Button>
+        <a href="about-us" class="text-sm font-medium hover:underline underline-offset-4">About us</a>
+        <a href="resources" class="text-sm font-medium hover:underline underline-offset-4">Resources</a>
+        <Button href="login" variant="outline">Login</Button>
       </nav>
     </header>
     <main class="flex-1">
