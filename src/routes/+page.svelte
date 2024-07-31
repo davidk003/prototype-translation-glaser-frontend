@@ -3,12 +3,12 @@
     import { Label } from "$lib/components/ui/label";
     import { Input } from "$lib/components/ui/input";
     import { Textarea } from "$lib/components/ui/textarea";
-    
+    import UCSDLogo from "$lib/components/logos/UCSD.svg?raw";
 </script>
-
 <div class="flex flex-col min-h-screen">
+
     <header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6 border-b">
-      <a href="#" class="mr-6 flex items-center">
+      <a href="/" class="mr-6 flex items-center">
         <!-- <MountainIcon class="h-6 w-6" /> -->
         <span class="sr-only">Acme Inc</span>
       </a>
@@ -23,11 +23,10 @@
         <div class="container grid max-w-5xl gap-8 px-4 md:px-6 lg:grid-cols-2">
           <div class="space-y-4">
             <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Streamline Your Workflow with Our Service
+              UCSD Contemporary Ukrainian Poetry Archive Dashboard
             </h1>
             <p class="text-muted-foreground md:text-xl">
-              Our platform helps you manage your tasks, collaborate with your team, and stay on top of your projects.
-              Get started today and take your productivity to the next level.
+              Your dashboard for submitting translations to <a class="underline" href="https://ukrpoetry.org/">ukrpoetry.com</a>.
             </p>
             <a
               href="/dashboard"
@@ -37,11 +36,15 @@
             </a>
           </div>
           <div class="flex items-center justify-center">
-            <img
-              src="/placeholder.svg"
+            <div style="box-shadow: 5 5 10px 10px transparent inset;" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">
+            {@html UCSDLogo}
+            <!-- <img src={thingy}> -->
+            </div>
+            <!-- <img
+              src=""
               alt="Hero Image"
               class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            /> -->
           </div>
         </div>
       </section>

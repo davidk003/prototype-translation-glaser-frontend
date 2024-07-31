@@ -92,7 +92,8 @@ onMount(() => {
   </script>
   
   <div class="flex min-h-screen bg-background">
-    <aside class="flex-shrink-0 w-[300px] transition-all duration-300 ease-in-out
+
+    <!-- <aside class="flex-shrink-0 w-[300px] transition-all duration-300 ease-in-out
               {menuClass} 
               md:translate-x-0 fixed md:static left-0 top-0 bottom-0 z-40
               flex flex-col border-r bg-muted/40 p-6 md:sticky md:top-0 md:h-screen">
@@ -106,9 +107,9 @@ onMount(() => {
         </Button>
       </div>
       <nav class="mt-8 flex flex-col gap-4">
-        <a href="/" class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
+        <a href="/" class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"> -->
           <!-- <HomeIcon class="h-5 w-5" /> -->
-           <div class="h-5 w-5">
+           <!-- <div class="h-5 w-5">
             <svg data-id="1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
            </div>
           Home
@@ -116,27 +117,28 @@ onMount(() => {
         <a href="/" class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
           <div class="h-5 w-5">
             <svg data-id="2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
-          </div>
+          </div> -->
           <!-- <LayoutGridIcon class="h-5 w-5" /> -->
-           
+<!--            
           API Requests
         </a>
         <a href="/analytics" class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
           <div class="h-5 w-5">
             <svg data-id="3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
-          </div>
+          </div> -->
           <!-- <ActivityIcon class="h-5 w-5" /> -->
-          Analytics
+          <!-- Analytics
         </a>
         <a href="/" class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
           <div class="h-5 w-5">
             <svg data-id="4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-          </div>
+          </div> -->
           <!-- <SettingsIcon class="h-5 w-5" /> -->
-          Settings
+          <!-- Settings
         </a>
       </nav>
-    </aside>
+    </aside> -->
+    
     <main class="flex-grow flex flex-col transition-all duration-300 ease-in-out
     {isMenuOpen ? 'md:ml-[300px]' : 'ml-0'}">
       <header class="sticky top-0 z-30 flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
