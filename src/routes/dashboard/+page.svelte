@@ -6,6 +6,8 @@
     import { Textarea } from "$lib/components/ui/textarea";
     import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "$lib/components/ui/collapsible";
     import { Progress } from "$lib/components/ui/progress";
+    import { toggleSidebar } from "$lib/components/custom-ui/sidebar";
+    import * as Avatar from "$lib/components/ui/avatar";
   
 
     const ChevronUpIcon = `<svg
@@ -139,11 +141,12 @@ onMount(() => {
       </nav>
     </aside> -->
     
-    <main class="flex-grow flex flex-col transition-all duration-300 ease-in-out
-    {isMenuOpen ? 'md:ml-[300px]' : 'ml-0'}">
+    <!-- <main class="flex-grow flex flex-col transition-all duration-300 ease-in-out
+    {isMenuOpen ? 'md:ml-[300px]' : 'ml-0'}"> -->
+    <main class="flex-grow flex flex-col">
       <header class="sticky top-0 z-30 flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
         <div class="flex items-center gap-4">
-          <Button variant="ghost" size="icon" on:click={() => {isMenuOpen = !isMenuOpen}}>
+          <Button variant="ghost" size="icon" on:click={()=>{toggleSidebar();}}>
             <div class="h-5 w-5">
               {@html MenuIcon}
             </div>
@@ -155,6 +158,10 @@ onMount(() => {
             <Button variant="ghost" size="icon" class="rounded-full">
               <img src="/placeholder.svg" width={36} height={36} alt="Avatar" class="rounded-full" />
             </Button>
+            <Avatar.Root>
+              <Avatar.Image/>
+              <Avatar.Fallback></Avatar.Fallback>
+            </Avatar.Root>
           </DropdownMenu.Trigger>
           <DropdownMenu.Content align="end">
             <DropdownMenu.Label>My Account</DropdownMenu.Label>
@@ -215,11 +222,4 @@ onMount(() => {
 
   <style>
     /* Add any additional styles here if needed */
-    @media (min-width: 768px) {
-        aside {
-            position: sticky;
-            top: 0;
-            height: 100vh;
-        }
-    }
 </style>
