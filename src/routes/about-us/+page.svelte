@@ -7,5 +7,5 @@
 </style>
 
 <main>
-<h1>Resources</h1>
+    <h1>About Us</h1>
 </main>

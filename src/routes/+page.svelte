@@ -7,17 +7,6 @@
 </script>
 <div class="flex flex-col min-h-screen">
 
-    <header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6 border-b">
-      <a href="/" class="mr-6 flex items-center">
-        <!-- <MountainIcon class="h-6 w-6" /> -->
-        <span class="sr-only">Acme Inc</span>
-      </a>
-      <nav class="ml-auto flex items-center gap-4 sm:gap-6">
-        <a href="about-us" class="text-sm font-medium hover:underline underline-offset-4">About us</a>
-        <a href="resources" class="text-sm font-medium hover:underline underline-offset-4">Resources</a>
-        <Button href="login" variant="outline">Login</Button>
-      </nav>
-    </header>
     <main class="flex-1">
       <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container grid max-w-5xl gap-8 px-4 md:px-6 lg:grid-cols-2">
