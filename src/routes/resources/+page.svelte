@@ -3,9 +3,10 @@
 </script>
 
 <style>
-    /* Add your styles here */
+
 </style>
 
 <main>
-<h1>Resources</h1>
+<h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl my-5">Resources</h1>
+<p>Closely associated poets formally from: <a class="underline" href="https://pen.org.ua/en">Ukrainian PEN club</a></p>
 </main>
