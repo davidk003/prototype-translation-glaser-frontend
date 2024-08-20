@@ -41,13 +41,6 @@
                     Requests
 
                 </a>
-                <a href="/"
-                class="flex items-center gap-3 hover:text-primary"
-                class:active={$page.url.pathname == "/"}
-                on:click={closeSidebar}>
-                    <HomeIcon/>
-                    Home
-                </a>
                 <a href="/dashboard/analytics"
                 class="flex items-center gap-3 hover:text-primary active:text-primary"
                 class:active={$page.url.pathname == "/dashboard/analytics"}
@@ -62,7 +55,13 @@
                 on:click={closeSidebar}>
                     <Settings/>
                     Settings
-
+                </a>
+                <a href="/"
+                class="flex items-center gap-3 hover:text-primary"
+                class:active={$page.url.pathname == "/"}
+                on:click={closeSidebar}>
+                    <HomeIcon/>
+                    Home
                 </a>
             </nav>
         </Sheet.Content>

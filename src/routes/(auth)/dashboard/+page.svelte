@@ -69,39 +69,10 @@ onMount(() => {
     <!-- <main class="flex-grow flex flex-col transition-all duration-300 ease-in-out
     {isMenuOpen ? 'md:ml-[300px]' : 'ml-0'}"> -->
     <main class="flex-grow flex flex-col">
-      <!-- <header class="sticky top-0 z-30 flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
-        <div class="flex items-center gap-4">
-          <Button variant="ghost" size="icon" on:click={()=>{toggleSidebar();}}>
-            <div class="h-5 w-5">
-              <Menu/>
-            </div>
-          </Button>
-          <Input type="search" placeholder="Search..." class="w-full max-w-xs rounded-lg bg-muted pl-8" />
-        </div>
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger>
-            <Button variant="ghost" size="icon" class="rounded-full">
-                <CircleUser class="rounded-full" width={36} height={36}/>
-            </Button>
-            <Avatar.Root>
-              <Avatar.Image/>
-              <Avatar.Fallback></Avatar.Fallback>
-            </Avatar.Root>
-          </DropdownMenu.Trigger>
-          <DropdownMenu.Content align="end">
-            <DropdownMenu.Label>My Account</DropdownMenu.Label>
-            <DropdownMenu.Separator />
-            <DropdownMenu.Item>Settings</DropdownMenu.Item>
-            <DropdownMenu.Item>Support</DropdownMenu.Item>
-            <DropdownMenu.Separator />
-            <DropdownMenu.Item>Logout</DropdownMenu.Item>
-          </DropdownMenu.Content>
-        </DropdownMenu.Root>
-      </header> -->
       <div class="flex-1 p-6">
         <div class="grid gap-6">
           <div class="grid gap-2">
-            <h2 class="text-2xl font-bold">API Requests</h2>
+            <h1 class="text-2xl font-bold">API Requests</h1>
             <p class="text-muted-foreground">Make API requests and monitor their progress.</p>
           </div>
           <div class="grid gap-4">
@@ -145,5 +116,18 @@ onMount(() => {
   </div>
 
   <style>
-    /* Add any additional styles here if needed */
+  /* body{
+    overflow: hidden;
+  } */
+  /* .no-scrollbars *::-webkit-scrollbar {
+    display: none;
+  }
+
+.no-scrollbars * {
+
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
+  } */
 </style>

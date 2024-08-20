@@ -4,8 +4,7 @@
     import { Input } from "$lib/components/ui/input";
     import * as Avatar from "$lib/components/ui/avatar";
     import { Button } from "$lib/components/ui/button";
-  import { Root } from "$lib/components/ui/sheet";
-  </script>
+</script>
   
   <div class="w-full max-w-3xl mx-auto p-6 md:p-10">
     <h1 class="text-3xl font-bold mb-6">Account Settings</h1>
