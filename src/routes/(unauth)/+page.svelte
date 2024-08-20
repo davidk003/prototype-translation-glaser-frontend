@@ -24,7 +24,7 @@
               Get Started
             </a>
 
-            <a href="#" class="display: flex underline mt-0 ">demo</a>
+            <a href="/demo" class="display: flex underline mt-0 ">demo</a>
           </div>
           <div class="flex items-center justify-center">
             <div style="box-shadow: 5 5 10px 10px transparent inset;" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">

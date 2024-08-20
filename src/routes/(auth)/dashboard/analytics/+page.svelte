@@ -6,7 +6,7 @@
     // import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationLink, PaginationNext } from '@/components/ui/pagination';
     // import { CartesianGrid, XAxis, Bar, BarChart, Line, LineChart } from 'recharts';
     // import { ChartTooltipContent, ChartTooltip, ChartContainer } from '$lib/components/ui/chart';
-    import { Package2Icon, BellIcon, HomeIcon, LineChartIcon, UsersIcon, LandmarkIcon, SettingsIcon } from 'lucide-svelte';
+    import { Package2Icon, BellIcon, HomeIcon, LineChartIcon, UsersIcon, LandmarkIcon, SettingsIcon, CircleUser } from 'lucide-svelte';
   
     // // You may need to implement or import these functions
     // function BarchartChart(props) {
@@ -69,7 +69,8 @@
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild let:builder>
             <Button variant="ghost" size="icon" class="rounded-full border w-8 h-8">
-              <img src="/placeholder.svg" width="32" height="32" class="rounded-full" alt="Avatar" />
+              <!-- <img src="/placeholder.svg" width="32" height="32" class="rounded-full" alt="Avatar" /> -->
+              <CircleUser class="rounded-full" width={36} height={36}/>
               <span class="sr-only">Toggle user menu</span>
             </Button>
           </DropdownMenu.Trigger>
