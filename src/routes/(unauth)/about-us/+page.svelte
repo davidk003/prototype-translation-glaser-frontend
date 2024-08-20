@@ -7,5 +7,6 @@
 </style>
 
 <main>
-    <h1>About Us</h1>
+    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl my-5">About Us</h1>
+
 </main>

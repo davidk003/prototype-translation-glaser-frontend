@@ -1,8 +1,8 @@
 <script>
-    import "../app.css";
-    import { Button } from "$lib/components/ui/button";
-    import { fly } from "svelte/transition";
-    export let data;
+  import "../../app.css";
+  import { Button } from "$lib/components/ui/button";
+  import { fly } from "svelte/transition";
+  export let data;
 </script>
 <header class="flex h-14 w-full shrink-0 items-center px-4 md:px-6 border-b">
     <a href="/" class="mr-6 flex items-center">
@@ -19,8 +19,8 @@
 
   {#key data.url}
   <div
-    in:fly={{ x: -200, duration: 300, delay: 300}}
-    out:fly={{ duration: 300}}>
+    in:fly={{ x: -200, duration: 150, delay: 150}}
+    out:fly={{ duration: 150}}>
     <slot/>
 </div>
   {/key}
