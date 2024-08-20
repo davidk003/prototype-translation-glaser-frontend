@@ -1,12 +1,13 @@
 <script>
   import { Button } from '$lib/components/ui/button';
+  import { Chrome } from 'lucide-svelte'
 
   const chromeIconSvg = `
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" 
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -47,7 +48,8 @@
       <p class="text-muted-foreground">Sign in to your account to continue</p>
     </div>
     <Button variant="outline" class="w-full flex items-center justify-center gap-2">
-      <span class="h-5 w-5 chrome-icon"> {@html chromeIconSvg}</span>
+      <!-- <span class="h-5 w-5 chrome-icon"> {@html chromeIconSvg}</span> -->
+      <span class="h-5 w-5 chrome-icon"> <Chrome/></span>
       Sign in with Google
     </Button>
     <div class="text-sm text-muted-foreground">
