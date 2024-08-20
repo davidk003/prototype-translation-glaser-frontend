@@ -1,6 +1,6 @@
-import Sidebar, {toggleSidebar} from "./sidebar.svelte";
+import Sidebar, {openSidebar} from "./sidebar.svelte";
 
 export {
     Sidebar,
-    toggleSidebar,
+    openSidebar,
 };
