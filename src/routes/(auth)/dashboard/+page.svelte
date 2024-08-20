@@ -12,24 +12,23 @@
 
     import { CircleUser, ChevronUp, Menu } from 'lucide-svelte'
 
-  let isQueueOpen = false;
-  let isMenuOpen = false;
+//   let isMenuOpen = false;
 
-$: menuClass = isMenuOpen ? 'translate-x-0' : '-translate-x-full';
+// $: menuClass = isMenuOpen ? 'translate-x-0' : '-translate-x-full';
 
-function handleResize() {
-  if (window.innerWidth >= 768) {
-    isMenuOpen = false; // Initially keep the sidebar closed even on larger screens
-  } else {
-    isMenuOpen = false;
-  }
-}
+// function handleResize() {
+//   if (window.innerWidth >= 768) {
+//     isMenuOpen = false; // Initially keep the sidebar closed even on larger screens
+//   } else {
+//     isMenuOpen = false;
+//   }
+// }
 
-onMount(() => {
-  handleResize();
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-});
+// onMount(() => {
+//   handleResize();
+//   window.addEventListener('resize', handleResize);
+//   return () => window.removeEventListener('resize', handleResize);
+// });
 
     let apiRequest = "";
     let processQueue: { id: number, status: string, progress: number }[] = [];
@@ -116,18 +115,4 @@ onMount(() => {
   </div>
 
   <style>
-  /* body{
-    overflow: hidden;
-  } */
-  /* .no-scrollbars *::-webkit-scrollbar {
-    display: none;
-  }
-
-.no-scrollbars * {
-
-  -ms-overflow-style: none;
-
-  scrollbar-width: none;
-
-  } */
 </style>
