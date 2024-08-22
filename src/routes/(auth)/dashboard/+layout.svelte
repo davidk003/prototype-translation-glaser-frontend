@@ -8,6 +8,21 @@
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
     // import * as Input from "$lib/components/ui/input";
     import { Menu } from 'lucide-svelte'
+
+    export let data;
+    let { supabase, session } = data
+    $: ({ supabase, session } = data)
+
+  async function handleSignout()
+  {
+    alert("signed out");
+    const { error } = await supabase.auth.signOut();
+    if (error)
+    {
+      alert(error.message);
+    }
+  }
+
 </script>
 <Sidebar></Sidebar>
 <header class="sticky top-0 z-30 flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
@@ -28,10 +43,10 @@
       <DropdownMenu.Content align="end">
         <DropdownMenu.Label>My Account</DropdownMenu.Label>
         <DropdownMenu.Separator />
-        <DropdownMenu.Item>Settings</DropdownMenu.Item>
-        <DropdownMenu.Item>Support</DropdownMenu.Item>
+        <DropdownMenu.Item class="cursor-pointer">Settings</DropdownMenu.Item>
+        <DropdownMenu.Item class="cursor-pointer">Support</DropdownMenu.Item>
         <DropdownMenu.Separator />
-        <DropdownMenu.Item>Logout</DropdownMenu.Item>
+        <DropdownMenu.Item on:click={handleSignout} class="cursor-pointer">Logout</DropdownMenu.Item>
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   </header>
