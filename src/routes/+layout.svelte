@@ -1,29 +1,26 @@
 <!-- src/routes/+layout.svelte -->
 <script lang="ts">
-	// import '../styles.css'
-	import { invalidate } from '$app/navigation'
-	import { onMount } from 'svelte'
+	import { invalidate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-	export let data
-
-	let { supabase, session } = data
-	$: ({ supabase, session } = data)
+	export let data;
+	$: ({ session, supabase } = data);
 
 	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((event, newSession) => {
+		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
 			if (newSession?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth')
+				invalidate('supabase:auth');
 			}
-		})
+		});
 
-		return () => data.subscription.unsubscribe()
-	})
+		return () => data.subscription.unsubscribe();
+	});
 </script>
 
 <svelte:head>
-	<title>User Management</title>
+	<title>UCSD Poetry Dashboard</title>
 </svelte:head>
 
-<div class="container" style="padding: 50px 0 100px 0">
-	<slot />
-</div>
+
+<slot />
+

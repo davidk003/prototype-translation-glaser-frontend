@@ -15,7 +15,7 @@
         <a href="/" class="text-sm font-medium hover:underline underline-offset-4">Home</a>
       <a href="about-us" class="text-sm font-medium hover:underline underline-offset-4">About us</a>
       <a href="resources" class="text-sm font-medium hover:underline underline-offset-4">Resources</a>
-      <Button href="login" variant="outline">Login</Button>
+      <Button data-sveltekit-preload-data="tap" href="login" variant="outline">Login</Button>
     </nav>
   </header>
 

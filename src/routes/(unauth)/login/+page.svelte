@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Button } from '$lib/components/ui/button';
   import { Chrome } from 'lucide-svelte'
   import { toast } from "svelte-sonner";
@@ -11,7 +11,7 @@
     await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `http://example.com/auth/callback`,
+      redirectTo: `/dashboard`,
     },
   })
 
@@ -43,11 +43,6 @@
       <h1 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Welcome back</h1>
       <p class="text-muted-foreground">Sign in to your account to continue</p>
     </div>
-    <script lang="ts">
-      import { toast } from "svelte-sonner";
-      import { Button } from "$lib/components/ui/button/index.js";
-    </script>
-     
     <Button
       variant="outline"
       on:click={() =>

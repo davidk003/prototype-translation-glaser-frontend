@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     // import "../../../app.css";
     import {Sidebar, openSidebar} from "$lib/components/custom-ui/sidebar";
     import { Button } from "$lib/components/ui/button";
@@ -8,6 +8,7 @@
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
     // import * as Input from "$lib/components/ui/input";
     import { Menu } from 'lucide-svelte'
+    import { redirect } from "@sveltejs/kit";
 
     export let data;
     let { supabase, session } = data
@@ -15,12 +16,16 @@
 
   async function handleSignout()
   {
-    alert("signed out");
     const { error } = await supabase.auth.signOut();
     if (error)
     {
       alert(error.message);
     }
+    else
+    {
+      console.log("Signed out");
+    }
+    document.location.href = "/";
   }
 
 </script>
