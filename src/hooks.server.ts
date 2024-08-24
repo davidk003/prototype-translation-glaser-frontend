@@ -63,15 +63,17 @@ const authGuard: Handle = async ({ event, resolve }) => {
   event.locals.session = session
   event.locals.user = user
 
-  console.log(`current path is: ${event.url.pathname}, session is: ${event.locals.session}`);
+  console.log(`path: ${event.url}, user: ${event.locals.session ? event.locals.session.user?.email : 'not logged in'}`);
+
   if (!event.locals.session && event.url.pathname.startsWith('/dashboard')) {
+    console.log('redirecting dashboard to login');
     redirect(303, '/login')
   }
-
   if (event.locals.session && event.url.pathname === '/') {
     console.log('redirecting to /dashboard');
     redirect(303, '/dashboard')
   }
+  
 
   return resolve(event)
 }
