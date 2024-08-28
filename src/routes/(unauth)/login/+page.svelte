@@ -21,7 +21,7 @@
     await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${location.href}`,
+      redirectTo: `${window.location.origin}`,
     },
     });
 
