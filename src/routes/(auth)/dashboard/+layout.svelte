@@ -41,8 +41,8 @@
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
         <Avatar.Root>
-          <Avatar.Image/>
-          <Avatar.Fallback></Avatar.Fallback>
+          <Avatar.Image src={session?.user.user_metadata.avatar_url}/>
+          <Avatar.Fallback>U</Avatar.Fallback>
         </Avatar.Root>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content align="end">
