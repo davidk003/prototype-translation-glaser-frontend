@@ -1,14 +1,10 @@
 <script lang="ts">
-  // import "../../../app.css";
-  import {Sidebar, openSidebar} from "$lib/components/custom-ui/sidebar";
-  import { Button } from "$lib/components/ui/button";
-  import { Input } from "$lib/components/ui/input";
-  // import * as Button from "$lib/components/ui/button";
-  import * as Avatar from "$lib/components/ui/avatar";
-  import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-  // import * as Input from "$lib/components/ui/input";
-  import { Menu } from 'lucide-svelte'
-  import { redirect } from "@sveltejs/kit";
+    import {Sidebar, openSidebar} from "$lib/components/custom-ui/sidebar";
+    import { Button } from "$lib/components/ui/button";
+    import { Input } from "$lib/components/ui/input";
+    import * as Avatar from "$lib/components/ui/avatar";
+    import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+    import { Menu } from 'lucide-svelte'
 
   export let data;
   let { supabase, session } = data
