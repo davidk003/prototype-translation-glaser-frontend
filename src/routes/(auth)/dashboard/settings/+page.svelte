@@ -6,6 +6,7 @@
   import { Button } from "$lib/components/ui/button";
   import * as AlertDialog from "$lib/components/ui/alert-dialog";
   import * as Select from "$lib/components/ui/select";
+  import { Settings } from 'lucide-svelte';
 
 
   export let data;
@@ -43,9 +44,13 @@
 
 
 </script>
-
+<header class="flex h-14 items-center gap-4 border-b bg-muted/40 px-6">
+  <Settings class="h-6 w-6" />
+  <div class="w-full flex-1">
+    <h1 class="text-2xl font-bold">Account Settings</h1>
+  </div>
+</header>
   <div class="w-full max-w-3xl mx-auto p-6 md:p-10">
-    <h1 class="text-3xl font-bold mb-6">Account Settings</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="space-y-6">
         <div>

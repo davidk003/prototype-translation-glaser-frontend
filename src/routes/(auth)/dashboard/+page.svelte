@@ -10,7 +10,7 @@
     import { openSidebar } from "$lib/components/custom-ui/sidebar";
     import * as Avatar from "$lib/components/ui/avatar";
 
-    import { CircleUser, ChevronUp, Menu } from 'lucide-svelte'
+    import { CircleUser, ChevronUp, Menu, Settings } from 'lucide-svelte'
 
 //   let isMenuOpen = false;
 
@@ -62,7 +62,12 @@
       // Any initialization code can go here
     });
   </script>
-  
+      <header class="flex h-14 items-center gap-4 border-b bg-muted/40 px-6">
+        <Settings class="h-6 w-6" />
+        <div class="w-full flex-1">
+          <h1 class="text-2xl font-bold">Account Settings</h1>
+        </div>
+      </header>
   <div class="flex min-h-screen bg-background">
     
     <!-- <main class="flex-grow flex flex-col transition-all duration-300 ease-in-out
@@ -71,7 +76,7 @@
       <div class="flex-1 p-6">
         <div class="grid gap-6">
           <div class="grid gap-2">
-            <h1 class="text-2xl font-bold">API Requests</h1>
+            <!-- <h1 class="text-2xl font-bold">API Requests</h1> -->
             <p class="text-muted-foreground">Make API requests and monitor their progress.</p>
           </div>
           <div class="grid gap-4">
