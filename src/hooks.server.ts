@@ -69,10 +69,10 @@ const authGuard: Handle = async ({ event, resolve }) => {
     console.log('redirecting dashboard to login');
     redirect(303, '/login')
   }
-  if (event.locals.session && event.url.pathname === '/') {
-    console.log('redirecting to /dashboard');
-    redirect(303, '/dashboard')
-  }
+  // if (event.locals.session && event.url.searchParams) {
+  //   console.log('redirecting to /dashboard');
+  //   redirect(303, '/dashboard')
+  // }
   
 
   return resolve(event)

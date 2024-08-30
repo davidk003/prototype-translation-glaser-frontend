@@ -4,6 +4,29 @@
     import { Input } from "$lib/components/ui/input";
     import { Textarea } from "$lib/components/ui/textarea";
     import UCSDLogo from "$lib/components/logos/UCSD.svg?raw";
+    import { onMount } from "svelte";
+    import { toast } from "svelte-sonner";
+    import {Toaster} from "$lib/components/ui/sonner";
+  import { page } from "$app/stores";
+    export let data;
+    let { supabase, session } = data
+    $: ({ supabase, session } = data)
+
+    onMount(() => {
+      console.log(`Mounted user: ${data.session ? data.session?.user?.email : "none"}`);
+      // toast.message("test")
+      // // toast.success("Logged in", {
+      // //     description: "redirecting to dashboard...",
+      // //   });
+      if(data.session && $page.url?.searchParams.has("code"))
+      {
+        toast.success("Logged in", {
+          description: "redirecting to dashboard...",
+        });
+        location.href = "/dashboard";
+      }
+    });
+    
 </script>
 <div class="flex flex-col min-h-screen">
 
@@ -35,6 +58,7 @@
         </div>
       </section>
     </main>
+    <Toaster richColors/>
     <footer class="bg-muted p-6 md:py-12 w-full">
       <div class="container max-w-7xl">
         <div class="grid gap-8">

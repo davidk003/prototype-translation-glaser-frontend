@@ -3,6 +3,7 @@
   import { Button } from "$lib/components/ui/button";
   import { fly } from "svelte/transition";
   export let data;
+  
 </script>
 <header class="flex h-14 w-full shrink-0 items-center px-4 md:px-6 border-b">
     <a href="/" class="mr-6 flex items-center">

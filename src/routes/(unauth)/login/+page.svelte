@@ -27,20 +27,20 @@
 
   }
 
-  onMount(() => {
-      console.log(`Mounted user: ${data.session ? data.session?.user?.email : "none"}`);
-      // toast.message("test")
-      // // toast.success("Logged in", {
-      // //     description: "redirecting to dashboard...",
-      // //   });
-      if(data.session)
-      {
-        toast.success("Logged in", {
-          description: "redirecting to dashboard...",
-        });
-        location.href = "/dashboard";
-      }
-    });
+  // onMount(() => {
+  //     console.log(`Mounted user: ${data.session ? data.session?.user?.email : "none"}`);
+  //     // toast.message("test")
+  //     // // toast.success("Logged in", {
+  //     // //     description: "redirecting to dashboard...",
+  //     // //   });
+  //     if(data.session)
+  //     {
+  //       toast.success("Logged in", {
+  //         description: "redirecting to dashboard...",
+  //       });
+  //       location.href = "/dashboard";
+  //     }
+  //   });
 </script>
 
 <!-- <style>

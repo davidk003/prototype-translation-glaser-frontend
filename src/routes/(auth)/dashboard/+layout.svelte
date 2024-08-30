@@ -1,18 +1,22 @@
 <script lang="ts">
-    // import "../../../app.css";
-    import {Sidebar, openSidebar} from "$lib/components/custom-ui/sidebar";
-    import { Button } from "$lib/components/ui/button";
-    import { Input } from "$lib/components/ui/input";
-    // import * as Button from "$lib/components/ui/button";
-    import * as Avatar from "$lib/components/ui/avatar";
-    import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-    // import * as Input from "$lib/components/ui/input";
-    import { Menu } from 'lucide-svelte'
-    import { redirect } from "@sveltejs/kit";
+  // import "../../../app.css";
+  import {Sidebar, openSidebar} from "$lib/components/custom-ui/sidebar";
+  import { Button } from "$lib/components/ui/button";
+  import { Input } from "$lib/components/ui/input";
+  // import * as Button from "$lib/components/ui/button";
+  import * as Avatar from "$lib/components/ui/avatar";
+  import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+  // import * as Input from "$lib/components/ui/input";
+  import { Menu } from 'lucide-svelte'
+  import { redirect } from "@sveltejs/kit";
 
-    export let data;
-    let { supabase, session } = data
-    $: ({ supabase, session } = data)
+  export let data;
+  let { supabase, session } = data
+  $: ({ supabase, session } = data)
+
+  let user = session?.user;
+  $: user = session?.user;
+
 
   async function handleSignout()
   {
@@ -26,6 +30,15 @@
       console.log("Signed out");
     }
     document.location.href = "/";
+  }
+
+  export function getInitials(): string | null
+  {
+    if (!user)
+    {
+      return null;
+    }
+    return user.user_metadata.name.split(" ").map((n:string) => n[0]).join("");
   }
 
 </script>
@@ -42,7 +55,7 @@
       <DropdownMenu.Trigger>
         <Avatar.Root>
           <Avatar.Image src={session?.user.user_metadata.avatar_url}/>
-          <Avatar.Fallback>U</Avatar.Fallback>
+          <Avatar.Fallback>{getInitials()}</Avatar.Fallback>
         </Avatar.Root>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content align="end">
